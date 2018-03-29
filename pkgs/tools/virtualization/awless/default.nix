@@ -2,15 +2,15 @@
 
 buildGoPackage rec {
   name = "awless-${version}";
-  version = "0.0.14";
+  version = "0.1.9";
 
   goPackagePath = "github.com/wallix/awless";
 
   src = fetchFromGitHub {
     owner  = "wallix";
     repo   = "awless";
-    rev    = version;
-    sha256 = "1syxw8d9y1b4bdb1arsx05m5mxnd0dqp3nj7fk5j1v7cnnbja3hj";
+    rev    = "v${version}";
+    sha256 = "17br4586sycvm77a40gq0sqk3cl78mgfjf1zgibssqplmhj4mfxh";
   };
 
   meta = with stdenv.lib; {
